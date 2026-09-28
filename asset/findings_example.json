@@ -1,0 +1,3 @@
+[{"severity":"P1","dimension":"键盘可达","symptom":"筛选面板打不开","evidence":"Tab 序列跳过触发器","basis":"键盘与ARIA","action":"触发器改 button 并暴露 aria-expanded","spec":"<button aria-expanded>","accept":"键盘可展开收起且焦点归还","cost":"S"},
+{"severity":"P0","dimension":"对比度","symptom":"次要文字不可读","evidence":"#9AA0A6 on #FFFFFF = 2.8:1","basis":"色彩与对比度","action":"改 #5F6368","spec":"color-text-secondary","accept":">=4.5:1","cost":"XS"},
+{"severity":"P2","dimension":"间距","symptom":"卡片内边距非阶梯","evidence":"13px/17px","basis":"布局与栅格","action":"统一 space-3/space-4","spec":"12/16px","accept":"无非阶梯值","cost":"S"}]
