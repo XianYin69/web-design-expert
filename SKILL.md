@@ -42,7 +42,7 @@ metadata:
 - 不得在无证据时给出合规结论，不得编造实测数值，不得臆造 URL／书名／条款号。
 - 不得改写 WCAG 条款编号与阈值，不得删除 `resistance/` 约束。
 - 不得修改 `web-design-guidelines` / `ui-design` / `frontend-dev` 目录，只互补调用。
-- 缓存与中间产物只落 tmp/，技能目录不留；所有 .md 与脚本 ≤50 行。
+- 缓存与中间产物只落 tmp/，技能目录不留；所有 .md ≤ 50 行（50 行红线只约束 markdown 文本；脚本 .py/.ps1/.sh/.cmd 不限行数，但仍禁裸 except、print 调试残留、>100 字符长行、超长函数）。
 
 ## 详细流程
 

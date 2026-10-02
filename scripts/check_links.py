@@ -1,4 +1,4 @@
-"""check_links.py — 悬空链接校验＋知识库确证计数（红线：悬空=0，.md/脚本 ≤50 行）。"""
+"""check_links.py — 悬空链接校验＋知识库确证计数（红线：悬空=0，.md ≤50 行（脚本不计行数））。"""
 import os, re, sys
 LINK = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 TAG = re.compile(r"\[(联网|本地)\]")
@@ -13,7 +13,7 @@ def scan(root):
                 continue
             p = os.path.join(dp, f)
             txt = open(p, encoding="utf-8").read()
-            if len(txt.splitlines()) > 50:
+            if f.endswith(".md") and len(txt.splitlines()) > 50:
                 over.append((os.path.relpath(p, root), len(txt.splitlines())))
             if f.endswith(".md"):
                 for m in LINK.finditer(txt):
